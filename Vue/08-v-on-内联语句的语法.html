@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:mouseenter="count--">-</button>
+        <span>{{ count }}</span>
+        <button @mouseenter="count++">+</button>
+        <!-- mouseenter鼠标划入的事件     
+        v-on: 可以替换成@  -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                count: 100
+            },
+            methods: {
+                fn() {
+                    console.log("123");
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="box">
+            <h3>小黑自动售卖机</h3>
+            <button @click="fn(5)">可乐5元</button>
+            <button @click="fn(10)">咖啡10元</button>
+        </div>
+        <p>银行卡余额：{{ total }}元</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                total: 999
+
+            },
+            methods: {
+                fn(money) {
+                    this.total = this.total - money
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

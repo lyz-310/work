@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 80px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 80px;
+            box-shadow: 2px 2px 2px #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="box" v-show="flag">我是控制v-show的盒子</div>
+        <!-- v-show本质通过display none完成    显示或隐藏-->
+        <div class="box" v-if="flag">我是控制v-if的盒子</div>
+        <!-- v-if整个元素都移除   创建和移除-->
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                flag: false
+            }
+        })
+    </script>
+</body>
+
+</html>

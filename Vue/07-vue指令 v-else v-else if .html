@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="gender === 1">性别：男</p>
+        <p v-else>性别：女</p>
+        <hr>
+        <!-- hr是分割线 -->
+        <p v-if="score>=90">成绩评定A：奖励电脑四台</p>
+        <p v-else-if="score>=80">成绩评定B：奖励电脑三台</p>
+        <p v-else-if="score>=70">成绩评定C：奖励电脑二台</p>
+        <p v-else-if="score>=60">成绩评定D：奖励电脑一台</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                gender: 2,
+                score: 65
+            }
+        })
+    </script>
+
+</body>
+
+</html>

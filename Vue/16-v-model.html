@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- v-model可以使我们的数据和视图形成双向的数据绑定 -->
+        <!-- 1.数据变化视图自动更新 -->
+        <!-- 2.视图变化数据自动更新 -->
+
+        <!-- 可以快速设置或获取表单的元素内容 -->
+        账户：<input type="text" v-model="username"><br><br>
+        密码：<input type="password" v-model="password"><br><br>
+        <button @click="login">登录</button>
+        <button @click="reset">重置</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                username: '',
+                password: ''
+            },
+            methods: {
+                login() {
+                    const text = "账号是" + this.username + "密码是" + this.password
+                    alert(text)
+                },
+                reset() {
+                    this.username = ''
+                    this.password = ''
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

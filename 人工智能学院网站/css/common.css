@@ -1,0 +1,636 @@
+/* 通用样式表 */
+/* 版心  */
+.w {
+    width: 1545px;
+    margin: 0 auto;
+}
+
+body {
+    background: url(../images/图标背景.png);
+}
+
+.style_red:hover {
+    color: #ff0000;
+}
+
+/* 声明字体 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?4tr5o2');
+    src: url('../fonts/icomoon.eot?4tr5o2#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?4tr5o2') format('truetype'),
+        url('../fonts/icomoon.woff?4tr5o2') format('woff'),
+        url('../fonts/icomoon.svg?4tr5o2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 导航栏部分 */
+.nav {
+    position: relative;
+
+    height: 140px;
+    background-color: pink;
+    background: url(../images/bg.png) no-repeat;
+
+}
+
+
+
+.logo {
+    width: 290px;
+    margin-top: 18px;
+    margin-left: 188px;
+}
+
+
+.search {
+    position: absolute;
+    top: 28px;
+    right: 236px;
+    background-color: transparent;
+    color: #fbfbfb;
+    font-size: 14px;
+    transition: all .8s;
+}
+
+.search:hover {
+    color: rgb(255, 255, 0);
+}
+
+.search::before {
+    font-family: 'icomoon';
+    content: '\e986';
+}
+
+.nav ul {
+    position: absolute;
+    right: 193px;
+    top: 86px;
+}
+
+.nav ul li {
+    float: left;
+    font-size: 18px;
+    height: 200px;
+    line-height: 24px;
+    padding: 0 9px;
+
+
+}
+
+.nav ul li a {
+    color: #fbfbfb;
+    transition: all .8s;
+}
+
+.nav ul li a:hover {
+    color: rgb(255, 255, 0);
+
+}
+
+.nav ul li:first-child {
+    border-bottom: 1px solid #dad4e1;
+    height: 38px;
+}
+
+/* 大图部分 */
+.pic img {
+    width: 1688px;
+}
+
+/* footer部分 */
+.footer {
+
+    height: 240px;
+    background: url(../images/底纹.png);
+
+
+}
+
+.footer-top {
+    height: 60px;
+    line-height: 60px;
+    background: url(../images/链接bg.png);
+}
+
+.footer-top ul {
+    margin-left: 405px;
+}
+
+.footer-top ul li {
+    float: left;
+    font-size: 14px;
+    color: #fbfbfb;
+}
+
+.footer-top ul li a {
+    font-size: 14px;
+    color: #fbfbfb;
+    transition: all .8s;
+}
+
+.footer-top ul li a:hover {
+    color: rgb(255, 255, 0);
+}
+
+.footer-top ul li:nth-child(n+2) {
+    padding-right: 10px;
+
+}
+
+.footer-bottom {
+    position: relative;
+    height: 180px;
+}
+
+.copyright {
+    height: 25px;
+    position: absolute;
+    left: 820px;
+    top: 40px;
+    color: #e0e0e0;
+    font-size: 12px;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.bottom_logo {
+    padding-top: 40px;
+    padding-left: 188px;
+}
+
+.bottom_logo img {
+    width: 290px;
+}
+
+.lianxi {
+    position: absolute;
+    top: 74px;
+    right: 350px;
+    color: #dad4e1;
+}
+
+.jieshao {
+    text-indent: 2em;
+}
+
+.code {
+    position: absolute;
+    top: 23px;
+    right: 205px;
+}
+
+/* 新闻通知部分 */
+.news {
+    height: 800px;
+
+}
+
+.title_blue {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.title_blue h4 {
+    color: #0e1e63;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.engish_blue {
+    position: relative;
+    height: 45px;
+    background: url(../images/news_bg.png) no-repeat;
+    background-position: center;
+    color: #0e1e63;
+    font-size: 18px;
+    line-height: 45px;
+    padding-left: 13px;
+}
+
+.engish_blue::after {
+    position: absolute;
+    top: 0;
+    left: 983px;
+    content: "————————";
+    color: #0e1e63;
+}
+
+.engish_blue::before {
+    position: absolute;
+    top: 0;
+    left: 402px;
+    content: "————————";
+    color: #0e1e63;
+}
+
+
+.toutiao {
+    height: 130px;
+    margin-top: 60px;
+}
+
+.toutiao_bg {
+    float: left;
+    height: 130px;
+    width: 130px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+.toutiao_bg img {
+    margin: 15px;
+}
+
+.neirong {
+    float: right;
+    width: 1395px;
+    height: 130px;
+    border: 1px solid #cccccc;
+}
+
+.neirong h5 {
+    height: 60px;
+    font-size: 31px;
+    color: #282828;
+    line-height: 60px;
+    text-align: center;
+}
+
+.neirong ul {
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+.neirong ul li {
+    float: left;
+    font-size: 18px;
+    color: #282828;
+    padding-left: 40px;
+}
+
+/* 新闻动态 */
+.news_notice {
+    position: relative;
+    height: 490px;
+
+}
+
+.news_dongtai_top {
+    display: inline-block;
+    line-height: 68px;
+    height: 68px;
+    width: 1000px;
+
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.news_engish {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.more {
+    float: right;
+    font-size: 17px;
+    margin-right: 35px;
+}
+
+.news_dongtai_bottom {
+    position: relative;
+    height: 417px;
+    width: 1000px;
+
+}
+
+.news_dongtai_bottom .pic {
+    display: inline-block;
+    margin-top: 30px;
+    width: 448px;
+    margin-left: 50px;
+}
+
+.news_dongtai_bottom .pic img {
+    height: 303px;
+    width: 448px;
+}
+
+.news_text {
+    width: 448px;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.news_lists {
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+
+.news_lists ul li a {
+    height: 40px;
+    line-height: 40px;
+
+}
+
+.notice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 490px;
+
+}
+
+.tongzhi {
+    height: 70px;
+}
+
+.notice_tongzhi_top {
+    display: inline-block;
+    line-height: 70px;
+    height: 70px;
+    width: 500px;
+
+    font-size: 30px;
+}
+
+.date {
+    position: relative;
+    height: 45px;
+    width: 70px;
+
+}
+
+.left_top {
+    position: absolute;
+    left: 10px;
+    top: -4px;
+    font-size: 25px;
+}
+
+.right_top_top {
+    position: absolute;
+    right: 14px;
+    top: 2px;
+}
+
+.right_top {
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+
+.middle_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 19px;
+}
+
+.notice_tongzhi_bottom ul {
+    margin-top: 30px;
+}
+
+
+.notice_tongzhi_bottom ul li a {
+    position: absolute;
+    width: 400px;
+    top: 10px;
+    right: 5px;
+    font-size: 16px;
+    color: #191919;
+    /* 显示不开自动换行 */
+    white-space: nowrap;
+    /* 强制一行，不允许换行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 这三个组成省略号 */
+    margin-left: 20px;
+
+}
+
+.gonggao {
+    position: relative;
+    height: 75px;
+    width: 500px;
+}
+
+/* 党建工作部分 */
+.title_red {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.title_red h4 {
+    color: #b1030c;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+/* 党建工作部分 */
+.work {
+    height: 643px;
+
+}
+
+.title_blue {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.title_red h4 {
+    color: #b1030c;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.engish_red {
+    position: relative;
+    height: 45px;
+    background: url(../images/dangjian_bg.png) no-repeat;
+    background-position: center;
+    color: #b1030c;
+    font-size: 18px;
+    line-height: 45px;
+    padding-left: 13px;
+}
+
+.engish_red::after {
+    position: absolute;
+    top: 0;
+    left: 980px;
+    content: "————————";
+    color: #b1030c;
+}
+
+.engish_red::before {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    content: "————————";
+    color: #b1030c;
+}
+
+.work_neirong {
+    position: relative;
+    height: 500px;
+    background-color: #ffffff;
+    margin-top: 45px;
+}
+
+.work_neirong ul li p {
+    font-size: 18px;
+    color: #151515;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.work_neirong ul li p::after {
+    float: right;
+    content: ">>";
+    font-size: 18px;
+    color: #151515;
+}
+
+.work_neirong ul li a {
+    display: inline-block;
+    font-size: 19px;
+    color: #191919;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.work_neirong ul {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.work_neirong ul li {
+    float: left;
+    height: 334px;
+    width: 352px;
+    margin-top: 30px;
+    margin-right: 29px;
+}
+
+.jiantou {
+    position: absolute;
+
+    top: 408px;
+    left: 733px;
+    width: 89px;
+    height: 43px;
+
+    font-size: 25px;
+
+}
+
+.jiantou a {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.jiantou_left,
+.jiantou_right {
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    background-color: #bc0003;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+}
+
+.jiantou_left {
+    position: absolute;
+    left: 0;
+}
+
+.jiantou_right {
+    position: absolute;
+    right: 0;
+}
+
+.down {
+    margin-top: 20px;
+}
+
+/* 人才引进部分 */
+.introction {
+    height: 442px;
+    width: 1500px;
+    background-color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.rencaiyinjin {
+    position: relative;
+    width: 336px;
+}
+
+em {
+    position: absolute;
+    left: -17px;
+    top: 42px;
+}
+
+.rencaiyinjin_more {
+    position: absolute;
+    top: 56px;
+    left: 268px;
+    font-size: 18px;
+    color: #2a2a2a;
+}
+
+.rencaiyinjin_neirong {
+    position: relative;
+    /* width: 1142px;
+    height: 442px; */
+    background-color: #ffffff;
+    margin-top: 45px;
+}
+
+.rencaiyinjin_neirong ul li p {
+    font-size: 18px;
+    color: #151515;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.rencaiyinjin_neirong ul li p::after {
+    float: right;
+    content: ">>";
+    font-size: 18px;
+    color: #151515;
+}
+
+.rencaiyinjin_neirong ul li a {
+    display: inline-block;
+    font-size: 19px;
+    color: #191919;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+
+.rencaiyinjin_neirong ul li {
+    float: left;
+    height: 343px;
+    width: 365px;
+    margin-left: 13px;
+}
+
+.rencaiyinjin_neirong ul {
+    position: absolute;
+    top: -450px;
+    left: 352px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<!--
+创建Vue实例，初始化渲染
+1.准备容器（Vue所管理的范围）
+2.引包 （开发版本/生产版本）  官网
+3.创建实例
+4.添加配置项 =>  完成渲染
+-->
+<div id="app">
+    <!-- 编写用于渲染的代码逻辑 -->
+    <img v-bind:src="imgUrl" v-bind:title="msg" alt="">
+    <img :src="imgUrl" v-bind:title="msg" alt="">
+
+    <!-- v-bind:src  => 简写 :src -->
+</div>
+
+<!-- 引入的是开发版本的包   包含完整的注释和警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+
+<script>
+    //一旦引入了vuejs核心包  在全局环境中 就有了vue构造函数
+    const app = new Vue({
+        //通过el配置选择器，指定vue所管理的是哪个盒子
+        el: '#app',
+        //通过data提供数据
+        data: {
+            imgUrl: './b.png',
+            msg: '我是坤坤'
+        }
+
+    })
+
+</script>
+
+<body>
+
+</body>
+
+</html>

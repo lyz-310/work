@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ nikename }}</p>
+        <p>{{ nikename.toUpperCase() }}</p>
+        <!-- toUpperCase()转大写 -->
+        <p>{{ nikename+'你好' }}</p>
+        <!-- 插值表达式：Vue的一种模板语法
+        作用：利用表达式 进行插值渲染
+        语法：{{ 表达式 }} -->
+        <p>{{ age>=18?'成年':'未成年'}}</p>
+        <p>{{ friend.name }}</p>
+        <p>{{ friend.desc }}</p>
+        <!-- 注意点：
+        1.使用的数据要存在
+        2.支持的是表达式 不是语句 if for
+        3.不能在标签属性中使用 -->
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                nikename: 'tony',
+                age: 18,
+                friend: {
+                    name: 'xiaoming',
+                    desc: '热爱学习Vue'
+                }
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
