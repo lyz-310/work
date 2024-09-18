@@ -1,0 +1,108 @@
+header {
+    height: 100px;
+
+}
+
+.logo img {
+    width: 160px;
+    margin-left: 100px;
+}
+
+.service {
+    margin-left: 900px;
+    margin-top: 30px;
+}
+
+section {
+    position: relative;
+    height: 650px;
+    background: url(../images/register.jpg);
+    background-position: -200px 0;
+}
+
+form {
+    position: absolute;
+    top: 40px;
+    right: 125px;
+}
+
+.register {
+    position: absolute;
+    background-color: #fff;
+    top: 66px;
+    right: 125px;
+    width: 350px;
+    height: 500px;
+}
+
+.huiyuan {
+    height: 50px;
+
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+
+    border-bottom: 1px solid gray;
+}
+
+.number {
+    position: absolute;
+    top: 45px;
+    left: -190px;
+    width: 280px;
+    height: 35px;
+    border: 1px solid #666;
+}
+
+.password {
+    position: absolute;
+    top: 130px;
+    left: -190px;
+    width: 280px;
+    height: 35px;
+    border: 1px solid #666;
+}
+
+.passwords {
+    position: absolute;
+    top: 224px;
+    left: -190px;
+    width: 280px;
+    height: 35px;
+    border: 1px solid #666;
+}
+
+.message {
+    position: absolute;
+    top: 170px;
+    left: -190px;
+    font-size: 12px;
+}
+
+.messages {
+    position: absolute;
+    top: 263px;
+    left: -190px;
+    font-size: 12px;
+}
+
+.sub {
+    position: absolute;
+    top: 350px;
+    left: -130px;
+    font-size: 12px;
+    width: 150px;
+    height: 50px;
+    background-color: #f23588;
+    color: #666;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

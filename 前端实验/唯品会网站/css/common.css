@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?inzd7e');
+    src: url('../fonts/icomoon.eot?inzd7e#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?inzd7e') format('truetype'),
+        url('../fonts/icomoon.woff?inzd7e') format('woff'),
+        url('../fonts/icomoon.svg?inzd7e#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 导航栏部分 */
+
+.header {
+    height: 200px;
+
+}
+
+.navs {
+    height: 30px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    line-height: 30px;
+
+}
+
+
+.address {
+    float: left;
+    margin-left: 30px;
+}
+
+.address::after {
+    padding-left: 15px;
+    font-family: 'icomoon';
+    content: '\e900';
+}
+
+.nav_right ul li {
+    float: left;
+    padding: 0 18px;
+
+}
+
+
+.nav_right ul {
+    margin-left: 400px;
+}
+
+.nav_right ul :nth-child(3)::before {
+    font-family: 'icomoon';
+    content: '\e901';
+    color: #f23588;
+
+}
+
+.nav_right ul :nth-child(-n+7):nth-child(n+5)::after {
+    font-family: 'icomoon';
+    content: '\e900';
+}
+
+.nav_right ul:last-child::after {
+    font-family: 'icomoon';
+    content: '\e900';
+}
+
+.nav_right ul :nth-child(8)::after {
+    font-family: 'icomoon';
+    content: '\e959';
+}
+
+.nav_bottom h3 img {
+    width: 170px;
+
+}
+
+.nav_bottom {
+    position: relative;
+}
+
+.service {
+    position: absolute;
+    top: 7px;
+    left: 167px;
+    width: 300px;
+}
+
+.nav_bottom input {
+    position: absolute;
+    top: 35px;
+    right: 145px;
+    border: 2px solid #f23588;
+    width: 360px;
+    height: 35px;
+}
+
+.serach {
+    position: absolute;
+    top: 35px;
+    right: 145px;
+    width: 50px;
+    height: 35px;
+    background: url(../images/1.png) no-repeat;
+
+    background-color: #f23588;
+    background-position: 10px 5px;
+
+}
+
+.car {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    padding-left: 5px;
+
+}
+
+.car::before {
+    font-family: 'icomoon';
+    content: '\e902';
+    font-size: 14px;
+}
+
+.car span {
+    position: absolute;
+    top: 7px;
+    right: 3px;
+    width: 25px;
+    height: 20px;
+    line-height: 22px;
+    background-color: #f23588;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.recommend li {
+    float: left;
+    height: 10px;
+    line-height: 10px;
+    color: #9999a6;
+    padding: 0 10px;
+    border-right: 1px solid #9999a6;
+}
+
+.nav_bottom ul li:last-child {
+    border-right: none;
+}
+
+.recommend {
+    position: absolute;
+    top: 78px;
+    right: 183px;
+}
+
+.category_left {
+
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #f23588;
+    color: #fff;
+    /* margin-left: 20px; */
+    text-align: center;
+    line-height: 45px;
+}
+
+.classify {
+    position: absolute;
+    top: 115px;
+    right: 200px;
+}
+
+.classify li {
+    float: left;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.nnav ul {
+    display: none;
+
+}
+
+.nnav {
+    position: relative;
+    background: #f23588;
+    z-index: 1;
+
+
+}
+
+.nnav a {
+    color: #fff;
+}
+
+.nnav ul li:hover {
+    background-color: #cccccc;
+}
+
+.more::after {
+
+    font-family: 'icomoon';
+    content: '\e900';
+}
+
+.more {
+    position: absolute;
+    right: 126px;
+    top: 114px;
+    display: inline-block;
+    width: 50px;
+    font-size: 16px;
+}
+
+/* footer部分 */
+.footer {
+    position: relative;
+    height: 500px;
+    background-color: white;
+    border-top: 1px solid #cccccc;
+}
+
+.footer .services {
+
+    text-align: center;
+    margin-top: 20px;
+}
+
+input {
+    color: #888;
+}
+
+dt {
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #9999a6;
+}
+
+.style_pink {
+    color: #f23588;
+    font-weight: 700;
+}
+
+.a {
+    display: inline-block;
+    width: 110px;
+    height: 160px;
+    border-right: 1px solid #888;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.erweima {
+    position: absolute;
+    top: 159px;
+    right: 340px;
+    height: 130px;
+
+}
+
+.erweima img {
+    width: 90px;
+    text-align: center;
+    line-height: 90px;
+}
+
+.about {
+    height: 30px;
+    background-color: #f23588;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.about ul {
+    margin-left: 120px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.about ul li {
+    float: left;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+    color: #fff;
+    line-height: 10px;
+}
+
+.lianxi {
+    margin-top: 30PX;
+    margin-left: 400px;
+}
+
+/* //主体部分 */
+
+.subject {
+    height: 1100px;
+}
+
+
+.subject a img {
+    width: 550px;
+
+    transition: all .5s;
+}
+
+.subject a:hover img {
+    transform: scale(1.1);
+}
+
+.subject .bigRed {
+    font-size: 25px;
+    color: red;
+    font-weight: 700;
+}
+
+
+
+.subject li {
+
+    float: left;
+    width: 550px;
+    height: 350px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.subject span {
+
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.text {
+    margin-top: 25px;
+}
+
+/* 电梯导航 */
+.aside {
+
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 5%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    transform: translate(-160px, -50%);
+    background-color: #f23588;
+    color: #fff;
+    z-index: 1;
+}

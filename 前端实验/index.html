@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Information.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3736758_vxpb728fcyh.css">
+    <!-- 引入bootstrap.css -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <style>
+        /* footer部分 */
+        .footer {
+
+            height: 240px;
+            background: url(../images/底纹.png);
+
+
+        }
+
+        .footer-top {
+            height: 60px;
+            line-height: 60px;
+            background: url(../images/链接bg.png);
+        }
+
+        .footer-top ul {
+            margin-left: 405px;
+        }
+
+        .footer-top ul li {
+            float: left;
+            font-size: 14px;
+            color: #fbfbfb;
+        }
+
+        .footer-top ul li a {
+            font-size: 14px;
+            color: #fbfbfb;
+            transition: all .8s;
+        }
+
+        .footer-top ul li a:hover {
+            color: rgb(255, 255, 0);
+        }
+
+        .footer-top ul li:nth-child(n+2) {
+            padding-right: 10px;
+
+        }
+
+        .footer-bottom {
+            position: relative;
+            height: 180px;
+        }
+
+        .copyright {
+            height: 25px;
+            position: absolute;
+            left: 820px;
+            top: 40px;
+            color: #e0e0e0;
+            font-size: 12px;
+            border-bottom: 1px solid #fbfbfb;
+        }
+
+        .bottom_logo {
+            padding-top: 40px;
+            padding-left: 188px;
+        }
+
+        .bottom_logo img {
+            width: 290px;
+        }
+
+        .lianxi {
+            position: absolute;
+            top: 74px;
+            right: 350px;
+            color: #dad4e1;
+        }
+
+        .jieshao {
+            text-indent: 2em;
+        }
+
+        .code {
+            position: absolute;
+            top: 23px;
+            right: 205px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="items" style="display: none;"><!-- 导航栏部分 start -->
+
+        <div class="content">
+            <div id="back"><--返回 </div>
+                    <img src="c:\Users\银镜镜\Desktop\人工智能学院网站\images\pic1.png" alt="" style="width: 100%;">
+                    <!-- 内容列表 -->
+                    <div class="cards">
+                        <h3 class="xiaoneinews">校内新闻</h3>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>封面</th>
+                                    <th>标题</th>
+                                    <th>发布时间</th>
+                                    <th>阅读数</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle news-list">
+                                <tr>
+                                    <td>
+                                        <img src="http://geek.itheima.net/uploads/1701279390863.jpg" alt="">
+                                    </td>
+                                    <td>数码产品</td>
+                                    <td>
+                                        <span>2023-11-30 01:36:39</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <button id="prevPage">上一页</button>
+                            <span id="pageNumber">&nbsp;1&nbsp;</span>
+                            <button id="nextPage">下一页</button>
+                        </div>
+
+                    </div>
+                    <!-- 新闻详细内容容器 -->
+                    <div id="news-content" style="display:none;">
+                        <!-- 这里将显示新闻的详细内容 -->
+                        <span id="back-arrow">←</span>
+                    </div>
+            </div>
+
+            <!-- footer部分 start -->
+            <footer class="footer ">
+                <footer class="footer-top ">
+
+                    <ul>
+                        <li>友情链接：</li>
+                        <li><a href="#">北京大学人工智能研究院</a></li>
+                        <li><a href="#">桂林电子科技大学计算机学院</a></li>
+                        <li><a href="#">通用人工智能研究院</a></li>
+                        <li><a href="#">中国人工智能学会</a></li>
+                        <li><a href="#">武汉人工智能研究院</a></li>
+                    </ul>
+                </footer>
+                <footer class="footer-bottom">
+                    <div class="bottom_logo"><img src="images/logo.png" alt=""></div>
+                    <div class="copyright">Copyright © 2023 ChinaDDOS All rights reserved 版权所有 · 桂林电子科技大学 人工智能学院
+                    </div>
+                    <div class="lianxi">人工智能学院联系方式: &nbsp;0773-229 0083 传真: &nbsp;773-229 0083 邮编：541004
+                        <p class="jieshao">版面设计、程序设计: 桂林电子科技大学艺术与设计学院 数字媒体技术 杨兵</p>
+                    </div>
+                    <div class="code"><img src="images/code.png" alt=""></div>
+                </footer>
+            </footer>
+
+            <!-- footer部分 end -->
+        </div>
+    </div>
+    <div class="tab">
+        <div class="tab_list">
+            <p class="text">系统管理</p>
+            <ul>
+                <li class="current">系统用户管理</li>
+                <li>角色管理</li>
+                <li>部门保障</li>
+                <li>职员管理</li>
+                <li>计算机管理</li>
+                <li>字典参数</li>
+                <li>用户信息</li>
+                <li>修改密码</li>
+                <li id="contentManagement">内容管理</li>
+                <li id="fabu">发布文章</li>
+                <li>新闻列表</li>
+
+            </ul>
+            <button id="items">主页</button>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;"><!-- 主体区域 -->
+                <div class="container">
+                    <!-- 头部标题和添加按钮 -->
+                    <div class="top">
+                        <h3>系统用户管理</h3>
+                        <button type="button" class="btn btn-primary plus-btn" data-bs-toggle="modal"
+                            data-bs-target=".add-modal"> + 添加
+                        </button>
+                    </div>
+                    <!-- 数据列表 -->
+                    <table class="table">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 150px;">序号</th>
+                                <th>用户名</th>
+                                <th>地区</th>
+                                <th>用户级别</th>
+                                <th style="width: 180px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <td>1</td>
+                                <td>小王</td>
+                                <td>桂林</td>
+                                <td>15</td>
+                                <td>
+                                    <span class="del">删除</span>
+                                    <span class="edit">编辑</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>小骆</td>
+                                <td>南宁</td>
+                                <td>19</td>
+                                <td>
+                                    <span class="del">删除</span>
+                                    <span class="edit">编辑</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 新增-弹出框 -->
+                <div class="modal fade add-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>添加用户</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 新增表单 -->
+                                <form class="add-form">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">用户</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入用户名"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">地区</label>
+                                        <input type="text" class="form-control author" placeholder="请输入地区"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">等级</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入等级"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary add-btn"> 保存 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 编辑-弹出框 -->
+                <div class="modal fade edit-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>编辑用户</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 编辑表单 -->
+                                <form class="edit-form">
+                                    <input type="hidden" class="id" name="id">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">用户名</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入用户名"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">地区</label>
+                                        <input type="text" class="form-control author" placeholder="请输入地区"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">等级</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入等级"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary edit-btn"> 修改 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">角色管理模块</div>
+            <div class="item">部门保障模块</div>
+            <div class="item">
+                <!-- 主体区域 -->
+                <div class="container">
+                    <!-- 头部标题和添加按钮 -->
+                    <div class="top">
+                        <h3>职员管理</h3>
+                        <button type="button" class="btn btn-primary plus-btn" data-bs-toggle="modal"
+                            data-bs-target=".add-modal"> +
+                            添加
+                        </button>
+                    </div>
+                    <!-- 数据列表 -->
+                    <table class="table">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 150px;">序号</th>
+                                <th>名字</th>
+                                <th>年龄</th>
+                                <th>所属部门</th>
+                                <th style="width: 180px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <td>1</td>
+                                <td>小骆</td>
+                                <td>21</td>
+                                <td>保安处</td>
+                                <td>
+                                    <span class="del">删除</span>
+                                    <span class="edit">编辑</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 新增-弹出框 -->
+                <div class="modal fade add-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>添加职员</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 新增表单 -->
+                                <form class="add-form">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">名字</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入名字"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">年龄</label>
+                                        <input type="text" class="form-control author" placeholder="请输入年龄"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">所属部门</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入所属部门"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary add-btn"> 保存 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 编辑-弹出框 -->
+                <div class="modal fade edit-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>编辑职员</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 编辑表单 -->
+                                <form class="edit-form">
+                                    <input type="hidden" class="id" name="id">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">名字</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入名字"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">年龄</label>
+                                        <input type="text" class="form-control author" placeholder="请输入年龄"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">所处部门</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入所属部门"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary edit-btn"> 修改 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- 主体区域 -->
+                <div class="container">
+                    <!-- 头部标题和添加按钮 -->
+                    <div class="top">
+                        <h3>计算机管理</h3>
+                        <button type="button" class="btn btn-primary plus-btn" data-bs-toggle="modal"
+                            data-bs-target=".add-modal"> +
+                            添加
+                        </button>
+                    </div>
+                    <!-- 数据列表 -->
+                    <table class="table">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 150px;">序号</th>
+                                <th>计算机名</th>
+                                <th>型号</th>
+                                <th>所属</th>
+                                <th style="width: 180px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <td>1</td>
+                                <td>dell</td>
+                                <td>5100</td>
+                                <td>208</td>
+                                <td>
+                                    <span class="del">删除</span>
+                                    <span class="edit">编辑</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 新增-弹出框 -->
+                <div class="modal fade add-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>添加计算机</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 新增表单 -->
+                                <form class="add-form">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">计算机名</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入计算机名称"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">型号</label>
+                                        <input type="text" class="form-control author" placeholder="请输入型号名称"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">所属</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入所属"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary add-btn"> 保存 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 编辑-弹出框 -->
+                <div class="modal fade edit-modal">
+                    <!-- 中间白色区域 -->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header top">
+                                <span>编辑计算机信息</span>
+                                <button type="button" class="btn-close" aria-label="Close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body form-wrap">
+                                <!-- 编辑表单 -->
+                                <form class="edit-form">
+                                    <input type="hidden" class="id" name="id">
+                                    <div class="mb-3">
+                                        <label for="bookname" class="form-label">计算机名称</label>
+                                        <input type="text" class="form-control bookname" placeholder="请输入计算机名称"
+                                            name="bookname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="author" class="form-label">型号</label>
+                                        <input type="text" class="form-control author" placeholder="请输入型号"
+                                            name="author">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">所属</label>
+                                        <input type="text" class="form-control publisher" placeholder="请输入所属"
+                                            name="publisher">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer btn-group">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                                <button type="button" class="btn btn-primary edit-btn"> 修改 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">字典参数模块</div>
+            <div class="item">
+                <div class="contents">
+                    <div class="info-wrap">
+                        <h3 class="title">基本设置</h3>
+                        <form class="user-form" action="javascript:;">
+                            <div class="form-item">
+                                <label for="email">邮箱</label>
+                                <input id="email" name="email" class="email" type="text" placeholder="1521797675@qq.com"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-item">
+                                <label for="nickname">昵称</label>
+                                <input id="nickname" name="nickname" class="nickname" type="text" placeholder="王二"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-item">
+                                <label>性别</label>
+                                <label class="male-label"><input type="radio" name="gender" class="gender" value="0"
+                                        checked="checked">男</label>
+                                <label class="male-label"><input type="radio" name="gender" class="gender"
+                                        value="1">女</label>
+                            </div>
+                            <div class="form-item">
+                                <label for="desc">个人简介</label>
+                                <textarea id="desc" name="desc" class="desc" placeholder="我来自桂林电子科技，今年大三了，来自数字媒体技术专业"
+                                    cols="20" rows="10" autocomplete="off"></textarea>
+                            </div>
+                            <button class="submit">更新</button>
+                        </form>
+                    </div>
+                    <div class="avatar-box">
+                        <h4 class="avatar-title">头像</h3>
+                            <img class="prew" src="th.jpg" alt="">
+                            <label for="upload">更换头像</label>
+                            <input id="upload" type="file" class="upload">
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <form action="" class="w">
+                    <p class="message">请输入原先密码</p>
+                    <input type="password" name="" id="" class="passwords">
+
+                    <p class="message">请输入新的密码</p>
+                    <input type="password" name="" id="" class="password">
+
+                    <p class="messages">再次输入密码</p>
+                    <input type="password" name="" id="" class="passwords">
+                    <input type="submit" name="" id="" value="修改" class="sub">
+                </form>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <!-- 筛选 -->
+                    <div class="card">
+                        <div class="title">
+                            <span>内容管理</span>
+                        </div>
+                        <div class="body">
+                            <form class="sel-form">
+                                <div>
+                                    <label class="form-label">状态:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" value="" id="all"
+                                            checked="">
+                                        <label class="form-check-label" for="all">
+                                            全部
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" value="1" id="audit">
+                                        <label class="form-check-label" for="audit">
+                                            待审核
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" value="2"
+                                            id="approved">
+                                        <label class="form-check-label" for="approved">
+                                            审核通过
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="form-label">频道:</label>
+                                    <select class="form-select" name="channel_id">
+                                        <option value="" selected="">请选择文章频道</option>
+                                        <option value="0">推荐</option>
+                                        <option value="1">html</option>
+                                        <option value="2">开发者资讯</option>
+                                        <option value="4">c++</option>
+                                        <option value="6">css</option>
+                                        <option value="7">数据库</option>
+                                        <option value="8">区块链</option>
+                                        <option value="9">go</option>
+                                        <option value="10">产品</option>
+                                        <option value="11">后端</option>
+                                        <option value="12">linux</option>
+                                        <option value="13">人工智能</option>
+                                        <option value="14">php</option>
+                                        <option value="15">javascript</option>
+                                        <option value="16">架构</option>
+                                        <option value="17">前端</option>
+                                        <option value="18">python</option>
+                                        <option value="19">java</option>
+                                        <option value="20">算法</option>
+                                        <option value="21">面试</option>
+                                        <option value="22">科技动态</option>
+                                        <option value="23">js</option>
+                                        <option value="24">设计</option>
+                                        <option value="25">数码产品</option>
+                                        <option value="26">软件测试</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-primary sel-btn">筛选</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 内容列表 -->
+                    <div class="card">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>封面</th>
+                                    <th>标题</th>
+                                    <th>状态</th>
+                                    <th>发布时间</th>
+                                    <th>阅读数</th>
+                                    <th>评论数</th>
+                                    <th>点赞数</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle art-list">
+                                <tr>
+                                    <td>
+                                        <img src="http://geek.itheima.net/uploads/1701279390863.jpg" alt="">
+                                    </td>
+                                    <td>数码产品</td>
+                                    <td>
+                                        <span class="badge text-bg-success">审核通过</span>
+
+
+                                    </td>
+                                    <td>
+                                        <span>2023-11-30 01:36:39</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td data-id="61a25a38-1857-4c72-a119-becf9b061c7a">
+                                        <i class="edit">编辑</i>
+                                        <i class="del">删除</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://img2.baidu.com/it/u=2640406343,1419332367&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=708&amp;h=500"
+                                            alt="">
+                                    </td>
+                                    <td>sdf</td>
+                                    <td>
+                                        <span class="badge text-bg-success">审核通过</span>
+
+
+                                    </td>
+                                    <td>
+                                        <span>2023-11-30 00:36:05</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td data-id="4e781fa6-fae3-495f-bb2b-8300124e5d02">
+                                        <i class="edit">编辑</i>
+                                        <i class="del"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <!-- 发布文章 -->
+                    <div class="card">
+                        <div class="title">
+                            <span>发布文章</span>
+                        </div>
+                        <div class="body">
+                            <form class="art-form">
+                                <input type="text" name="id" hidden>
+                                <div>
+                                    <label for="title" class="form-label">标题：</label>
+                                    <input type="text" class="form-control" id="title" name="title">
+                                </div>
+                                <div>
+                                    <label for="channel_id" class="form-label">频道：</label>
+                                    <select class="form-select" id="channel_id" name="channel_id">
+                                        <option value="" selected>请选择文章频道</option>
+                                        <option value="1">频道1</option>
+                                        <option value="2">频道2</option>
+                                        <option value="3">频道3</option>
+                                    </select>
+                                </div>
+                                <div class="cover">
+                                    <label for="img">封面：</label>
+                                    <label for="img" class="place">+</label>
+                                    <input class="img-file" type="file" name="img" id="img" hidden>
+                                    <img class="rounded">
+                                </div>
+                                <div>
+                                    <div id="editor—wrapper">
+                                        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                                        <button id="publishButton">发布</button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <!-- 内容列表 -->
+                    <div class="cards">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>封面</th>
+                                    <th>标题</th>
+                                    <th>发布时间</th>
+                                    <th>阅读数</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle news-list">
+                                <tr>
+                                    <td>
+                                        <img src="http://geek.itheima.net/uploads/1701279390863.jpg" alt="">
+                                    </td>
+                                    <td>数码产品</td>
+                                    <td>
+                                        <span>2023-11-30 01:36:39</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <button id="prevPage">上一页</button>
+                            <span id="pageNumber">&nbsp;1&nbsp;</span>
+                            <button id="nextPage">下一页</button>
+                        </div>
+
+                    </div>
+                    <!-- 新闻详细内容容器 -->
+                    <div id="news-content" style="display:none;">
+                        <!-- 这里将显示新闻的详细内容 -->
+                        <span id="back-arrow">←</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.min.js"></script>
+        <script src="form-serialize.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+        <script src="js/button.js"></script>
+        <script src="js/editor.js"> </script>
+        <script src="js/alert.js"></script>
+        <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+
+</body>
+
+</html>

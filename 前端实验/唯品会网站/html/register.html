@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="../images/logo.png" alt=""></a></div>
+        <div class="service"><img src="../images/2.png" alt=""></div>
+    </header>
+    <section>
+        <div class="register">
+            <div class="huiyuan">会员注册</div>
+            <form action="">
+                <input type="text" name="" id="" value="请输入手机号" class="number">
+                <input type="password" name="" id="" class="password">
+                <p class="message">请输入6-16位密码</p>
+                <input type="password" name="" id="" class="passwords">
+                <p class="messages">再次输入密码</p>
+                <input type="submit" name="" id="" value="立即注册" class="sub">
+            </form>
+
+        </div>
+    </section>
+    <!-- footer部分  start -->
+    <div class="footer">
+        <div class="w">
+            <div class="services"><img src="../images/service.png" alt=""></div>
+            <div class="a">
+                <dl>
+                    <dd>服务保障</dd>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                </dl>
+            </div>
+            <div class="a">
+                <dl>
+                    <dd>服务保障</dd>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                </dl>
+            </div>
+            <div class="a">
+                <dl>
+                    <dd>服务保障</dd>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                </dl>
+            </div>
+            <div class="a">
+                <dl>
+                    <dd>服务保障</dd>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                </dl>
+            </div>
+            <div class="a">
+                <dl>
+                    <dd>服务保障</dd>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                    <dt>正品保障</dt>
+                </dl>
+            </div>
+            <div class="erweima"><img src="../images/erweima.jpg" alt="">
+                <div>下载唯品会app</div>
+            </div>
+            <div class="about">
+                <ul>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                </ul>
+            </div>
+            <div class="lianxi">骆银柱联系方式: &nbsp;15891655588 qq:1521797675 &nbsp;
+                <p class="jieshao"> 桂林电子科技大学艺术与设计学院 数字媒体技术 骆银柱</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer部分  end -->
+
+
+
+    <script>
+        //搜索框
+        var input = document.querySelector('input');
+        input.onfocus = function () {
+            input.style.color = 'black';
+            input.value = '';
+        }
+        input.onblur = function () {
+            if (input.value === '')
+                input.value = '请输入手机号';
+            input.style.color = '#888';
+
+        }
+
+
+        //密码框
+        var password = document.querySelector('.password');
+        var message = document.querySelector('.message');
+        password.onblur = function () {
+            if (this.value.length < 6 || this.value.length > 16) {
+                message.className = 'message red';
+                message.innerHTML = '您输入的位数不对 要求6-16位';
+            }
+            else {
+                message.className = 'message green';
+                message.innerHTML = '您输入的正确';
+            }
+        }
+        var passwords = document.querySelector('.passwords');
+        var messages = document.querySelector('.messages');
+        passwords.onblur = function () {
+            if (this.value != password.value) {
+
+                messages.className = 'messages red';
+                messages.innerHTML = '您输入的两次密码不一致';
+            }
+            else {
+                messages.className = 'messages green';
+                messages.innerHTML = '您输入一致';
+            }
+        }
+    </script>
+</body>
+
+</html>
